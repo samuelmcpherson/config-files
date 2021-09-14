@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=Breeze-Blue-Dark Look And Feel
+Name=Breeze-Blue-Dark
+X-KDE-PluginInfo-Author=l4k1
+X-KDE-PluginInfo-Category=Plasma Look And Feel
+X-KDE-PluginInfo-Email=l4k1987@gmail.com
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPLv3
+X-KDE-PluginInfo-Name=Breeze-Blue-Dark
+X-KDE-PluginInfo-Version=1.1
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KPackage-Dependencies=kns://colorschemes.knsrc/api.kde-look.org/1338140,kns://plasma-themes.knsrc/api.kde-look.org/1338121,kns://aurorae.knsrc/api.kde-look.org/1338138,kns://icons.knsrc/api.kde-look.org/1338123,kns://icons.knsrc/api.kde-look.org/1338127,kns://icons.knsrc/api.kde-look.org/1281798,kns://icons.knsrc/api.kde-look.org/1298508,kns://wallpaper.knsrc/api.kde-look.org/1337519,kns://wallpaper.knsrc/api.kde-look.org/1396666,kns://wallpaper.knsrc/api.kde-look.org/1396664,kns://sddmtheme.knsrc/api.kde-look.org/1338132,kns://sddmtheme.knsrc/api.kde-look.org/1338135,kns://sddmtheme.knsrc/api.kde-look.org/1303298

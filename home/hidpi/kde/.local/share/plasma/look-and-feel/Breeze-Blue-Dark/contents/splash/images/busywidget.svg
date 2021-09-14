@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="busywidget.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg854"
+   version="1.1"
+   viewBox="0 0 140 140"
+   height="37.041668mm"
+   width="37.041668mm">
+  <defs
+     id="defs848">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient838">
+      <stop
+         style="stop-color:#a5b4c3;stop-opacity:1"
+         offset="0"
+         id="stop834" />
+      <stop
+         style="stop-color:#103c68;stop-opacity:1"
+         offset="1"
+         id="stop836" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="50"
+       x2="50"
+       y1="0.44388619"
+       x1="99.126595"
+       id="linearGradient862"
+       xlink:href="#linearGradient838"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="50"
+       x2="50"
+       y1="0.67164379"
+       x1="99.703003"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient842"
+       xlink:href="#linearGradient838"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="50"
+       x2="50"
+       y1="0.56650031"
+       x1="99.731926"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient844"
+       xlink:href="#linearGradient838"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="50"
+       x2="50"
+       y1="0.8071987"
+       x1="99.018425"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient832"
+       xlink:href="#linearGradient838"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="1022"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="69.578213"
+     inkscape:cx="39.404928"
+     inkscape:zoom="4.0960937"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata851">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-198.57143,-709.66254)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       id="g22"
+       transform="matrix(2,0,0,2,268.57143,779.66254)">
+      <g
+         id="g20"
+         transform="scale(0.7)"
+         ng-attr-transform="scale({{config.scale}})">
+        <g
+           id="g18"
+           transform="translate(-50,-50)">
+          <g
+             id="g4">
+            <animateTransform
+               repeatCount="indefinite"
+               begin="0s"
+               dur="0.75s"
+               keyTimes="0;1"
+               values="0 50 50;360 50 50"
+               calcMode="linear"
+               type="rotate"
+               attributeName="transform" />
+            <path
+               style="fill:url(#linearGradient844);fill-opacity:1;opacity:0.8"
+               id="path2"
+               d="M 50,50 V 0 a 50,50 0 0 1 50,50 z"
+               ng-attr-fill="{{config.c1}}"
+               ng-attr-fill-opacity="{{config.opacity}}"
+               inkscape:connector-curvature="0" />
+          </g>
+          <g
+             id="g8">
+            <animateTransform
+               repeatCount="indefinite"
+               begin="0s"
+               dur="1s"
+               keyTimes="0;1"
+               values="0 50 50;360 50 50"
+               calcMode="linear"
+               type="rotate"
+               attributeName="transform" />
+            <path
+               style="fill:url(#linearGradient842);fill-opacity:1;opacity:0.8"
+               id="path6"
+               transform="rotate(90,50,50)"
+               d="M 50,50 V 0 a 50,50 0 0 1 50,50 z"
+               ng-attr-fill="{{config.c2}}"
+               ng-attr-fill-opacity="{{config.opacity}}"
+               inkscape:connector-curvature="0" />
+          </g>
+          <g
+             id="g12">
+            <animateTransform
+               repeatCount="indefinite"
+               begin="0s"
+               dur="1.5s"
+               keyTimes="0;1"
+               values="0 50 50;360 50 50"
+               calcMode="linear"
+               type="rotate"
+               attributeName="transform" />
+            <path
+               style="fill:url(#linearGradient862);fill-opacity:1;opacity:0.8"
+               id="path10"
+               transform="rotate(180,50,50)"
+               d="M 50,50 V 0 a 50,50 0 0 1 50,50 z"
+               ng-attr-fill="{{config.c3}}"
+               ng-attr-fill-opacity="{{config.opacity}}"
+               inkscape:connector-curvature="0" />
+          </g>
+          <rect
+             y="285.35831"
+             x="-0.52916706"
+             height="3.7041693"
+             width="3.7041671"
+             id="hint-rotation-angle"
+             style="fill:#9966cc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26458335" />
+          <g
+             transform="translate(-36.777084,0)"
+             id="busywidget" />
+          <g
+             id="g16">
+            <animateTransform
+               repeatCount="indefinite"
+               begin="0s"
+               dur="3s"
+               keyTimes="0;1"
+               values="0 50 50;360 50 50"
+               calcMode="linear"
+               type="rotate"
+               attributeName="transform" />
+            <path
+               style="fill:url(#linearGradient832);fill-opacity:1;opacity:0.8"
+               id="path14"
+               transform="rotate(-90,50,50)"
+               d="M 50,50 V 0 a 50,50 0 0 1 50,50 z"
+               ng-attr-fill="{{config.c4}}"
+               ng-attr-fill-opacity="{{config.opacity}}"
+               inkscape:connector-curvature="0" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

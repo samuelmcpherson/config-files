@@ -1,0 +1,23 @@
+1.4
+===
+-Changed name to Ghost:Legacy
+-inherited many elements from Ghost 2.0 that were previously missing in 1.x
+-minor clock update (old ver: clock-old.svg)
+-lancelot updated
+
+1.2
+=====
+-most elements converted to use "hint-apply-color-scheme" so that custom color may easily be used
+-tooltip transparency adjusted and border colored
+-glow added to tooltop edges (compositing enabled only)
+-background margins adjusted
+-minor change to analog clock highlights
+-added toolbox graphic
+-change to hovered tasks & pager graphic
+-various file size reductions and cleanup
+-analog meter color adjusted
+-thin outline added to dialog, krunner, shutdowndialog backgrounds
+
+1.0
+===
+-Public release 

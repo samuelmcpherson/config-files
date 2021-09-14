@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=System;
+Exec=gebaard -b
+Name=gebaard
+StartupNotify=false
+Terminal=false
+Type=Application

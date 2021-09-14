@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=Legacy Version 1.4. Back by popular demand!
+Name=Ghost-blue
+X-KDE-PluginInfo-Author=J.M.Todaro
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-Email=jmtodaro@gmail.com
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=Ghost:Legacy
+X-KDE-PluginInfo-Version=1.4.1
+X-KDE-PluginInfo-Website=http://jmtodaro.com
+X-Ubuntu-Gettext-Domain=desktop_kdebase-runtime
