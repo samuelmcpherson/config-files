@@ -2,4 +2,4 @@
 update_info=kscreenlocker.upd:0.1-autolock
 
 [Greeter]
-Theme=Breeze-Blue-Dark
+Theme=org.kde.breezedark.desktop

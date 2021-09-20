@@ -12,12 +12,12 @@ conky.config = {
 	draw_outline = false,
 	draw_shades = false,
 	gap_x = 60,
-	gap_y = 6,
-        maximum_width = 325,
+	gap_y = 75,
+        maximum_width = 400,
 	max_port_monitor_connections = 64,
 	max_specials = '512',
 	max_user_text = 16384,
-	minimum_width = 325, minimum_height = 10,
+	minimum_width = 400, minimum_height = 10,
         maximum_height = 50,
 	net_avg_samples = 2,
 	no_buffers = true,
@@ -33,7 +33,7 @@ conky.config = {
 	use_spacer = 'yes',
 	use_xft = true,
 	xftalpha = 0.8,
-	font = 'Bitstream Vera Sans Mono:size=9',
+	font = 'Bitstream Vera Sans Mono:size=10',
         default_bar_height = 9,
         default_bar_width = 200,
 
@@ -87,6 +87,6 @@ ${color}|-${exec zfs list rpool/ROOT -o name | sed -n '2'p | cut -d '/' -f 2}   
 |
 ${color}|-${exec zfs list rpool/USERDATA -o name | sed -n '2'p | cut -d '/' -f 2}               ${exec zfs list rpool/USERDATA -o used,available,referenced | sed -n '2'p} 
   |-${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o name | sed -n '2'p | cut -d '/' -f 3}       ${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o used,available,referenced | sed -n '2'p}  
-  |-${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o name | sed -n '3'p | cut -d '/' -f 3}          ${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o used,available,referenced | sed -n '3'p}
+  |-${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o name | sed -n '3'p | cut -d '/' -f 3}   ${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o used,available,referenced | sed -n '3'p}
   
 ]];

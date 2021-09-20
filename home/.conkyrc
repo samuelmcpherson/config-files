@@ -12,12 +12,12 @@ conky.config = {
 	draw_outline = false,
 	draw_shades = false,
 	gap_x = 25,
-	gap_y = 3,
-	maximum_width = 310,
+	gap_y = 75,
+	maximum_width = 340,
 	max_port_monitor_connections = 64,
 	max_specials = '512',
 	max_user_text = 16384,
-	minimum_width = 310, minimum_height = 10,
+	minimum_width = 340, minimum_height = 10,
 	net_avg_samples = 2,
 	no_buffers = true,
 	out_to_console = false,
@@ -32,7 +32,7 @@ conky.config = {
 	use_spacer = 'yes',
 	use_xft = true,
 	xftalpha = 0.8,
-	font = 'Bitstream Vera Sans Mono:size=9',
+	font = 'Bitstream Vera Sans Mono:size=10',
 
 
 };
@@ -45,21 +45,33 @@ ${color #0077FF}${hr 2}
 Temperature: ${color}${execi 1 sensors | grep "Core 0" | cut -d '(' -f 1 | cut -d '+' -f 2} ${execi 1000 sensors | grep "Core 0" | cut -d '(' -f 2 | cut -d ',' -f 1}
 ${color #0077FF}Load:
 ${color}Thread0:$color ${cpu cpu0}% ${color #0077FF}${cpubar 10,51}   ${color}Thread1:$color ${cpu cpu1}% ${color #0077FF}${cpubar 10,51}
-${color #0077FF}${cpugraph cpu0 39,150 104E8B 0077ff} ${color #0077FF}${cpugraph cpu1 39,150 104E8B 0077ff}
+${color #0077FF}${cpugraph cpu0 39,160 104E8B 0077ff} ${color #0077FF}${cpugraph cpu1 39,160 104E8B 0077ff}
 ${color #0077FF}CPU Core1:
 ${color #0077FF}${hr 2}
 Temperature:  ${color}${execi 1 sensors | grep "Core 1" | cut -d '(' -f 1 | cut -d '+' -f 2} ${execi 1000 sensors | grep "Core 1" | cut -d '(' -f 2 | cut -d ',' -f 1}
 Load:
 ${color}Thread2:$color ${cpu cpu2}% ${color #0077FF}${cpubar 10,51}   ${color}Thread3:$color ${cpu cpu3}% ${color #0077FF}${cpubar 10,51}
-${color #0077FF}${cpugraph cpu2 39,150 104E8B 0077ff} ${color #0077FF}${cpugraph cpu3 39,150 104E8B 0077ff}
+${color #0077FF}${cpugraph cpu2 39,160 104E8B 0077ff} ${color #0077FF}${cpugraph cpu3 39,160 104E8B 0077ff}
+${color #0077FF}CPU Core2:
+${color #0077FF}${hr 2}
+Temperature: ${color}${execi 1 sensors | grep "Core 2" | cut -d '(' -f 1 | cut -d '+' -f 2} ${execi 1000 sensors | grep "Core 2" | cut -d '(' -f 2 | cut -d ',' -f 1}
+${color #0077FF}Load:
+${color}Thread4:$color ${cpu cpu4}% ${color #0077FF}${cpubar 10,51}   ${color}Thread5:$color ${cpu cpu5}% ${color #0077FF}${cpubar 10,51}
+${color #0077FF}${cpugraph cpu4 39,160 104E8B 0077ff} ${color #0077FF}${cpugraph cpu5 39,160 104E8B 0077ff}
+${color #0077FF}CPU Core3:
+${color #0077FF}${hr 2}
+Temperature:  ${color}${execi 1 sensors | grep "Core 3" | cut -d '(' -f 1 | cut -d '+' -f 2} ${execi 1000 sensors | grep "Core 3" | cut -d '(' -f 2 | cut -d ',' -f 1}
+Load:
+${color}Thread6:$color ${cpu cpu6}% ${color #0077FF}${cpubar 10,51}   ${color}Thread7:$color ${cpu cpu7}% ${color #0077FF}${cpubar 10,51}
+${color #0077FF}${cpugraph cpu6 39,160 104E8B 0077ff} ${color #0077FF}${cpugraph cpu7 39,160 104E8B 0077ff}
 #${color #0077ff}Disk I/O: $color${diskio} $alignr${color #0077ff}${diskiograph 50,270 104E8B 0077ff 750}
 ${color #0077ff}${hr 2}
 ${color #0077ff}ZFS ARC Usage: ${color}${exec arc_summary | grep 'ARC size' | tr -s ' ' | cut -d ' ' -f6,7}${color #0077ff}/${color}${exec arc_summary | grep 'Target size' | tr -s ' ' | cut -d ' ' -f7,8}  ${exec arc_summary | grep 'ARC size' | tr -s ' ' | cut -d ' ' -f4,5 | tr -d ' '}
 ${color #0077ff}RAM Usage:$color $mem${color #0077ff}/${color}$memmax $memperc% ${color #0077ff}${membar 10,70}
-${memgraph 39,309}
+${memgraph 39,333}
 ${color #0077ff}Swap Usage:$color $swap${color #0077ff}/${color}$swapmax $swapperc% ${color #0077ff}${swapbar 10,70}
 ${color #0077ff}Net Down:$color ${downspeed wlp3s0}/s       ${color #0077ff}Net Up:$color ${upspeed wlp3s0}/s
-${color #0077ff}${downspeedgraph wlp3s0 39,150 104E8B 0077ff} ${color #0077ff}${upspeedgraph wlp3s0 39,150 104E8B 0077ff}
+${color #0077ff}${downspeedgraph wlp3s0 39,160 104E8B 0077ff} ${color #0077ff}${upspeedgraph wlp3s0 39,160 104E8B 0077ff}
 ${color #0077FF}${hr 2}
 ${color #0077ff}Top Processes:
 ${color #0077ff}Name                PID     CPU%   MEM%

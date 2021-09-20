@@ -1,44 +1,39 @@
-[DownloadDialog Settings]
-eDP-1 Height 1800=494
-eDP-1 Width 2880=700
+[General]
+Number of Actions=0
 
-[PlasmaRunnerManager]
-LaunchCounts=1 services_applications:systemsettings.desktop,1 services_applications:org.kde.dolphin.desktop,1 services_applications:firefox.desktop
+[KFileDialog Settings]
+Recent Files[$e]=ubuntu-bg-fin.png,file:$HOME/wallpaper/ubuntu-bg-fin.png
+Recent URLs[$e]=file:$HOME/wallpaper/
+detailViewIconSize=16
 
-[PlasmaTransientsConfig]
-PreloadWeight=10
+[PlasmaViews][Panel 2]
+panelVisibility=0
 
 [PlasmaViews][Panel 2][Defaults]
-thickness=54
+thickness=24
 
 [PlasmaViews][Panel 2][Horizontal1920]
-thickness=44
+thickness=24
 
-[PlasmaViews][Panel 2][Horizontal2880]
-thickness=54
-
-[PlasmaViews][Panel 22]
+[PlasmaViews][Panel 23]
 alignment=132
 panelVisibility=1
 
-[PlasmaViews][Panel 22][Defaults]
-minLength=1252
-thickness=90
+[PlasmaViews][Panel 23][Defaults]
+maxLength=838
+minLength=724
+thickness=50
 
-[PlasmaViews][Panel 22][Horizontal2880]
-minLength=1050
-thickness=74
+[PlasmaViews][Panel 23][Horizontal1920]
+thickness=44
 
-[PlasmaViews][Panel 22][Vertical1080]
-minLength=762
-thickness=54
-
-[PlasmaViews][Panel 22][Vertical1800]
-minLength=1252
-thickness=90
+[PlasmaViews][Panel 23][Vertical1080]
+maxLength=838
+minLength=724
+thickness=50
 
 [ScreenConnectors]
-0=eDP-1
+0=LVDS-1
 
 [Updates]
-performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js
