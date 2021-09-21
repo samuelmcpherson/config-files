@@ -3,7 +3,7 @@ AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=WhiteOnBlack
 DimmValue=128
-Font=Hack,11,-1,5,50,0,0,0,0,0
+Font=Hack,10,-1,5,50,0,0,0,0,0
 LineSpacing=0
 TabColor=invalid
 UseFontLineChararacters=false
@@ -24,6 +24,7 @@ Environment=TERM=xterm-256color,COLORTERM=truecolor
 Icon=utilities-terminal
 LocalTabTitleFormat=%d : %n
 Name=Profile 1
+Parent=FALLBACK/
 RemoteTabTitleFormat=(%u) %H
 ShowTerminalSizeHint=true
 SilenceSeconds=10
