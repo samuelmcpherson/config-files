@@ -15,6 +15,9 @@ Id_5=57ebd368-96e4-4c1a-8d13-3d8c9d9fdd13
 Number=5
 Rows=5
 
+[Effect-PresentWindows]
+BorderActivateAll=9
+
 [KDE]
 AnimationDurationFactor=0.125
 
@@ -27,6 +30,7 @@ desktopchangeosdEnabled=false
 krohnkiteEnabled=true
 minimizeallEnabled=false
 synchronizeskipswitcherEnabled=false
+toggleparachuteEnabled=true
 videowallEnabled=false
 
 [Script-krohnkite]
@@ -38,6 +42,9 @@ ignoreClass=krunner,yakuake,spectacle,kded5,conky
 ignoreScreen=\s\s
 layoutPerActivity=false
 newWindowAsMaster=true
+
+[Script-toggleparachute]
+BorderActivate=7
 
 [SubSession: 0a5a1c94-4a2f-4f38-bd4f-04b7924958b6]
 active=-1
@@ -52,6 +59,7 @@ active=-1
 count=0
 
 [TabBox]
+BorderActivate=9
 DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 LayoutName=org.kde.breeze.desktop
