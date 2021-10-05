@@ -1,7 +1,10 @@
-[zroot/ROOT]
+[rpool/ROOT]
 	use_template = production
 	recursive = yes
-[zroot/DATA]
+[rpool/USERDATA]
+	use_template = production
+	recursive = yes
+[bpool/BOOT]
 	use_template = production
 	recursive = yes
 
