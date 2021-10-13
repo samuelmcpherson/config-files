@@ -121,6 +121,7 @@ Theme=breeze-dark
 AnimationDurationFactor=0.17677669529663687
 ColorScheme=BreezeLight
 LookAndFeelPackage=org.kde.breezedark.desktop
+SingleClick=false
 contrast=4
 widgetStyle=Breeze
 
