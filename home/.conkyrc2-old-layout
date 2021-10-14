@@ -1,0 +1,89 @@
+conky.config = {
+	alignment = 'top_left',
+	background = false,
+	border_width = 1,
+	cpu_avg_samples = 2,
+	default_color = 'cornflowerblue',
+	default_outline_color = 'white',
+	default_shade_color = 'white',
+	double_buffer = true,
+	draw_borders = false,
+	draw_graph_borders = true,
+	draw_outline = false,
+	draw_shades = false,
+	gap_x = 60,
+	gap_y = 75,
+        maximum_width = 400,
+	max_port_monitor_connections = 64,
+	max_specials = '512',
+	max_user_text = 16384,
+	minimum_width = 400, minimum_height = 10,
+        maximum_height = 50,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_console = false,
+	wm_class_name = 'Conky',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = false,
+	own_window_type = 'conky',
+	own_window = true,
+	stippled_borders = 2,
+	update_interval = 300,
+	uppercase = false,
+	use_spacer = 'yes',
+	use_xft = true,
+	xftalpha = 0.8,
+	font = 'Bitstream Vera Sans Mono:size=10',
+        default_bar_height = 9,
+        default_bar_width = 200,
+
+};
+
+conky.text = [[
+${color #0077ff}$nodename ${alignc}$sysname $kernel 
+${color #0077FF}${hr 2}
+
+${color #0077FF}ZFS Storage Pools:
+${color #0077FF}${hr 2}
+${color #0077FF}${exec zpool list -o name,allocated,free,size,capacity,health | sed -n '1'p }
+${color}${exec zpool list -o name,allocated,free,size,capacity,health | sed -n '2'p }
+
+
+${color #0077FF}${exec zpool list -o name | sed -n '2'p } ${color}${alignr}${exec zpool status zroot | grep errors: | cut -d ':' -f2}
+${color}${execp  zpool list -Ho name,allocated,size,capacity | sed -n '1'p | awk '{ print "" $2 "/" $3 "  " $4 "${color #0077FF} ${execbar echo  " $4 "}" }'}
+
+${color #0077FF}ZFS Datasets:
+${color #0077FF}${hr 2}
+${exec zfs list zroot -o name | sed -n '1'p}                     ${exec zfs list zroot -o used,available,referenced | sed -n '1'p}
+
+${color #0077FF}${exec zfs list bpool -o name | sed -n '2'p | cut -d '/' -f 1}  
+${color}|-${exec zfs list bpool/BOOT -o name | sed -n '2'p | cut -d '/' -f 2}                   ${exec zfs list bpool/BOOT -o used,available,referenced | sed -n '2'p}
+  |-${exec zfs list bpool/BOOT/$(mount | grep /boot) -o name | sed -n '2'p | cut -d '/' -f 3}        ${exec zfs list bpool/BOOT/$(mount | grep /boot) -o used,available,referenced | sed -n '2'p}
+    
+${color #0077FF}${exec zfs list rpool -o name | sed -n '2'p | cut -d '/' -f 1}
+${color}|-${exec zfs list rpool/ROOT -o name | sed -n '2'p | cut -d '/' -f 2}                   ${exec zfs list rpool/ROOT -o used,available,referenced | sed -n '2'p}
+| |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT) -o name | sed -n '2'p | cut -d '/' -f 3}        ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT) -o used,available,referenced | sed -n '2'p}
+|   |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT) -o name | sed -n '3'p | cut -d '/' -f 4}                ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT) -o used,available,referenced | sed -n '3'p}
+|   |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT) -o name | sed -n '4'p | cut -d '/' -f 4}                ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT) -o used,available,referenced | sed -n '4'p}
+|   |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/usr -o name | sed -n '2'p | cut -d '/' -f 4}                ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/usr -o used,available,referenced | sed -n '2'p}
+|   | |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/usr/local -o name | sed -n '2'p | cut -d '/' -f 5}            ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/usr/local -o used,available,referenced | sed -n '2'p}
+|   |
+|   |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var -o name | sed -n '2'p | cut -d '/' -f 4}                ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var -o used,available,referenced | sed -n '2'p}
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/games -o name | sed -n '2'p | cut -d '/' -f 5}            ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/games -o used,available,referenced | sed -n '2'p}
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib -o name | sed -n '2'p | cut -d '/' -f 5}              ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib -o used,available,referenced | sed -n '2'p}
+|     | |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/AccountsService -o name | sed -n '2'p | cut -d '/' -f 6}${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/AccountsService -o used,available,referenced | sed -n '2'p}
+|     | |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/NetworkManager -o name | sed -n '2'p | cut -d '/' -f 6} ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/NetworkManager -o used,available,referenced | sed -n '2'p}
+|     | |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/apt -o name | sed -n '2'p | cut -d '/' -f 6}            ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/apt -o used,available,referenced | sed -n '2'p}
+|     | |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/dpkg -o name | sed -n '2'p | cut -d '/' -f 6}           ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/lib/dpkg -o used,available,referenced | sed -n '2'p}
+|     |
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/log -o name | sed -n '2'p | cut -d '/' -f 5}              ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/log -o used,available,referenced | sed -n '2'p}
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/mail -o name | sed -n '2'p | cut -d '/' -f 5}             ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/mail -o used,available,referenced | sed -n '2'p}
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/snap -o name | sed -n '2'p | cut -d '/' -f 5}             ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/snap -o used,available,referenced | sed -n '2'p}
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/spool -o name | sed -n '2'p | cut -d '/' -f 5}            ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/spool -o used,available,referenced | sed -n '2'p}
+|     |-${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/www -o name | sed -n '2'p | cut -d '/' -f 5}              ${exec zfs list rpool/ROOT/$(mount | grep rpool/ROOT | sed -n '1'p | cut -d ' ' -f 1 | cut -d '/' -f 3)/var/www -o used,available,referenced | sed -n '2'p}
+|
+${color}|-${exec zfs list rpool/USERDATA -o name | sed -n '2'p | cut -d '/' -f 2}               ${exec zfs list rpool/USERDATA -o used,available,referenced | sed -n '2'p} 
+  |-${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o name | sed -n '2'p | cut -d '/' -f 3}       ${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o used,available,referenced | sed -n '2'p}  
+  |-${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o name | sed -n '3'p | cut -d '/' -f 3}   ${exec zfs list rpool/USERDATA/$(mount | grep rpool/USERDATA) -o used,available,referenced | sed -n '3'p}
+  
+]];

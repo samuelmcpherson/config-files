@@ -26,6 +26,7 @@ Meta=org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeS
 
 [Plugins]
 ParachuteEnabled=true
+blurEnabled=false
 desktopchangeosdEnabled=false
 krohnkiteEnabled=true
 minimizeallEnabled=false
