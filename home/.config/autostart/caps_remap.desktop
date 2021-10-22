@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=System;
+Exec=caps_remap.sh
+Name=gebaard
+StartupNotify=false
+Terminal=false
+Type=Application
