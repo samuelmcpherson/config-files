@@ -1,10 +1,12 @@
 "use strict";
-var __spreadArrays = (this && this.__spreadArrays) || function () {
-    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-    for (var r = Array(s), k = 0, i = 0; i < il; i++)
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-    return r;
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
 };
 var Shortcut;
 (function (Shortcut) {
@@ -1089,7 +1091,8 @@ var TilingEngine = (function () {
             tilingArea = workingArea.gap(CONFIG.screenGapLeft, CONFIG.screenGapRight, CONFIG.screenGapTop, CONFIG.screenGapBottom);
         var visibles = this.windows.getVisibleWindows(srf);
         debugObj(function () { return ["arrangeScreen", {
-                layout: layout, srf: srf,
+                layout: layout,
+                srf: srf,
                 visibles: visibles.length,
             }]; });
         visibles.forEach(function (window) {
@@ -2027,7 +2030,7 @@ var MonocleLayout = (function () {
             tile.geometry = area;
         });
         if (ctx.backend === KWinDriver.backendName && KWINCONFIG.monocleMinimizeRest) {
-            var tiles_1 = __spreadArrays(tileables);
+            var tiles_1 = __spreadArray([], tileables, true);
             ctx.setTimeout(function () {
                 var current = ctx.currentWindow;
                 if (current && current.tiled) {

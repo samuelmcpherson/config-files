@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SPDX-FileCopyrightText: 2018-2019 Eon S. Jeon <esjeon@hyunmu.am> 
+  SPDX-License-Identifier: MIT
+-->
 <kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
@@ -7,7 +11,7 @@
     <group name="">
 
     <entry name="debug" type="Bool">
-	    <label>Print debug messages</label>
+	    <label>Enable logging</label>
         <default>false</default>
     </entry>
 
@@ -58,7 +62,7 @@
 
     <entry name="ignoreClass" type="String">
 	    <label>Ignore windows with certain classes(comma-separated list)</label>
-        <default>krunner,yakuake,spectacle,kded5</default>
+        <default>yakuake,spectacle,Conky</default>
     </entry>
 
     <entry name="ignoreRole" type="String">
@@ -169,21 +173,6 @@
     <entry name="tileLayoutGap" type="Int">
         <label>Gap between tiles in Tile layout</label>
         <default>0</default>
-    </entry>
-
-    <entry name="pollMouseXdotool" type="Bool">
-	    <label>Poll actual mouse position using xdotool (for tile swapping, for example)</label>
-        <default>false</default>
-    </entry>
-
-    <entry name="directionalKeyDwm" type="Bool">
-	    <label>Up, Down, Left, and Right shortcut behaves like dwm</label>
-        <default>true</default>
-    </entry>
-
-    <entry name="directionalKeyFocus" type="Bool">
-	    <label>Up, Down, Left, and Right shortcut moves focus</label>
-        <default>false</default>
     </entry>
 
     <entry name="limitTileWidth" type="Bool">

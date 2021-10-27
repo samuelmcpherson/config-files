@@ -1,22 +1,26 @@
+# SPDX-FileCopyrightText: none
+# 
+# SPDX-License-Identifier: MIT
+
 [Desktop Entry]
-Name=Krohnkite
-Comment=A dynamic tiling script for KWin (2a47753)
-Icon=dialog-tile-clones
+Name=Bismuth
+Comment=Tiling extention that gets you down to bismuth
+Icon=bismuth
 
 X-Plasma-API=declarativescript
 X-Plasma-MainScript=ui/main.qml
 
 X-KDE-PluginInfo-Author=Eon S. Jeon
 X-KDE-PluginInfo-Email=esjeon@hyunmu.am
-X-KDE-PluginInfo-Name=krohnkite
-X-KDE-PluginInfo-Version=0.8
+X-KDE-PluginInfo-Name=bismuth
+X-KDE-PluginInfo-Version=1.0.2
 
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=MIT
 X-KDE-ServiceTypes=KWin/Script,KCModule
 
 X-KDE-Library=kwin/effects/configs/kcm_kwin4_genericscripted
-X-KDE-PluginKeyword=krohnkite
-X-KDE-ParentComponents=krohnkite
+X-KDE-PluginKeyword=bismuth
+X-KDE-ParentComponents=bismuth
 
 Type=Service
