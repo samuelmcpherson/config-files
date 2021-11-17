@@ -13,11 +13,11 @@ conky.config = {
 	draw_shades = false,
 	gap_x = 60,
 	gap_y = 75,
-        maximum_width = 400,
+        maximum_width = 345,
 	max_port_monitor_connections = 64,
 	max_specials = '512',
 	max_user_text = 16384,
-	minimum_width = 400, minimum_height = 10,
+	minimum_width = 345, minimum_height = 10,
         maximum_height = 50,
 	net_avg_samples = 2,
 	no_buffers = true,
@@ -35,7 +35,7 @@ conky.config = {
 	xftalpha = 0.8,
 	font = 'Bitstream Vera Sans Mono:size=10',
         default_bar_height = 9,
-        default_bar_width = 200,
+        default_bar_width = 214,
 
 };
 
@@ -54,26 +54,20 @@ ${color}${execp  zpool list -Ho name,allocated,size,capacity | sed -n '1'p | awk
 
 ${color #0077FF}ZFS Datasets:
 ${color #0077FF}${hr 2}
-${exec zfs list zroot -o name | sed -n '1'p}                     ${exec zfs list zroot -o used,available,referenced | sed -n '1'p}
+${exec zfs list zroot -o name | sed -n '1'p}                 ${exec zfs list zroot -o used,available,referenced | sed -n '1'p}
 
-${color #0077FF}${exec zfs list zroot -o name | sed -n '2'p | cut -d '/' -f 1}
-${color}|-${exec zfs list zroot -o name | sed -n '2'p | cut -d '/' -f 2}                  ${exec zfs list zroot -o used,available,referenced | sed -n '2'p}
-  |-${exec zfs list zroot/ROOT -o name | sed -n '2'p | cut -d '/' -f 2}                 ${exec zfs list zroot/ROOT -o used,available,referenced | sed -n '2'p}
-  | |-${exec zfs list zroot/ROOT/debian -o name | sed -n '2'p | cut -d '/' -f 3}             ${exec zfs list zroot/ROOT/debian -o used,available,referenced | sed -n '2'p}
-  |   |-${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1) -o name | sed -n '2'p | cut -d '/' -f 4}          ${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1) -o used,available,referenced | sed -n '2'p}
-  |     |-${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/root -o name | sed -n '2'p | cut -d '/' -f 5}           ${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/root -o used,available,referenced | sed -n '2'p}
-  |     |-${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/var -o name | sed -n '2'p | cut -d '/' -f 5}            ${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/var -o used,available,referenced | sed -n '2'p}
-  |       |-${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/var/cache -o name | sed -n '2'p | cut -d '/' -f 6}        ${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/var/cache -o used,available,referenced | sed -n '2'p}
-  |       |-${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/var/lib -o name | sed -n '2'p | cut -d '/' -f 6}          ${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1)/var/lib -o used,available,referenced | sed -n '2'p}
+${color #0077FF}${exec zfs list zroot -o name | sed -n '2'p | cut -d '/' -f 1}                ${color}${exec zfs list zroot -o used,available,referenced | sed -n '2'p}
+|-${exec zfs list zroot/$(hostname) -o name | sed -n '2'p | cut -d '/' -f 2}    ${exec zfs list zroot/$(hostname) -o used,available,referenced | sed -n '2'p}
+  |-${exec zfs list zroot/$(hostname)/ROOT -o name | sed -n '2'p | cut -d '/' -f 3}             ${exec zfs list zroot/$(hostname)/ROOT -o used,available,referenced | sed -n '2'p}
+  | |-${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1) -o name | sed -n '2'p | cut -d '/' -f 4}        ${exec zfs list $(mount | grep zfs | grep "on / " | cut -d ' ' -f 1) -o used,available,referenced | sed -n '2'p}
   |
-  |-${exec zfs list zroot/DATA -o name | sed -n '2'p | cut -d '/' -f 2}                 ${exec zfs list zroot/DATA -o used,available,referenced | sed -n '2'p}
-    |-${exec zfs list zroot/DATA/debian -o name | sed -n '2'p | cut -d '/' -f 3}             ${exec zfs list zroot/DATA/debian -o used,available,referenced | sed -n '2'p}
-      |-${exec zfs list zroot/DATA/debian/home -o name | sed -n '2'p | cut -d '/' -f 4}             ${exec zfs list zroot/DATA/debian/home -o used,available,referenced | sed -n '2'p}
-      | |-${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o name | sed -n '2'p | cut -d '/' -f 5}       ${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o used,available,referenced | sed -n '2'p}
-      | |-${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o name | sed -n '3'p | cut -d '/' -f 5}       ${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o used,available,referenced | sed -n '3'p}
-      |
-      |-${exec zfs list zroot/DATA/debian/var -o name | sed -n '2'p | cut -d '/' -f 4}              ${exec zfs list zroot/DATA/debian/var -o used,available,referenced | sed -n '2'p}
-        |-${exec zfs list zroot/DATA/debian/var/lib -o name | sed -n '2'p | cut -d '/' -f 5}            ${exec zfs list zroot/DATA/debian/var/lib -o used,available,referenced | sed -n '2'p}
-        |-${exec zfs list zroot/DATA/debian/var/log -o name | sed -n '2'p | cut -d '/' -f 5}            ${exec zfs list zroot/DATA/debian/var/log -o used,available,referenced | sed -n '2'p}
+  |-${exec zfs list zroot/$(hostname)/DATA -o name | sed -n '2'p | cut -d '/' -f 3}             ${exec zfs list zroot/$(hostname)/DATA -o used,available,referenced | sed -n '2'p}
+    |-${exec zfs list zroot/$(hostname)/DATA/home -o name | sed -n '2'p | cut -d '/' -f 4}           ${exec zfs list zroot/$(hostname)/DATA/home -o used,available,referenced | sed -n '2'p}
+    | |-${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o name | sed -n '2'p | cut -d '/' -f 5}      ${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o used,available,referenced | sed -n '2'p}
+    | |-${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o name | sed -n '3'p | cut -d '/' -f 5}   ${exec zfs list $(mount | grep zfs | grep "on /home" | cut -d ' ' -f 1) -o used,available,referenced | sed -n '3'p}
+    |
+    |-${exec zfs list zroot/$(hostname)/DATA/var -o name | sed -n '2'p | cut -d '/' -f 4}            ${exec zfs list zroot/$(hostname)/DATA/var -o used,available,referenced | sed -n '2'p}
+      |-${exec zfs list zroot/$(hostname)/DATA/var/lib -o name | sed -n '2'p | cut -d '/' -f 5}          ${exec zfs list zroot/$(hostname)/DATA/var/lib -o used,available,referenced | sed -n '2'p}
+      |-${exec zfs list zroot/$(hostname)/DATA/var/log -o name | sed -n '2'p | cut -d '/' -f 5}          ${exec zfs list zroot/$(hostname)/DATA/var/log -o used,available,referenced | sed -n '2'p}
   
 ]];

@@ -73,8 +73,8 @@ ${color #0077ff}Swap Usage:$color $swap${color #0077ff}/${color}$swapmax $swappe
 #${swapgraph 50,550}
 #${color #0077ff}Procs:$color $processes ${color #0077ff}Run:$color $running_processes ${color #0077ff}CPU:$color ${i2c 0-002d temp 2}${color #0077ff} MB:$color ${i2c 0-002d temp 1} ${color #0077ff}HD:$color ${hddtemp /dev/hda}
 #${color #0077ff}Entropy: ${color}${entropy_avail}${color #0077ff}/${color}${entropy_poolsize} ${color #0077ff}${entropy_bar 15,270}
-${color #0077ff}Net Down:$color ${downspeed wlp2s0} /s ${color #0077ff}Net Up:$color ${upspeed wlp1s0} /s
-${color #0077ff}${downspeedgraph wlp2s0 50,270 104E8B 0077ff} ${color #0077ff}${upspeedgraph wlp1s0 50,270 104E8B 0077ff}
+${color #0077ff}Net Down:$color ${downspeed NETDEVICE} /s ${color #0077ff}Net Up:$color ${upspeed wlp1s0} /s
+${color #0077ff}${downspeedgraph NETDEVICE 50,270 104E8B 0077ff} ${color #0077ff}${upspeedgraph wlp1s0 50,270 104E8B 0077ff}
 ${color #0077FF}${hr 2}
 ${color #0077ff}Top Processes:
 ${color #0077ff}Name                PID     CPU%   MEM%

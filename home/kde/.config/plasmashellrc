@@ -22,7 +22,7 @@ panelVisibility=1
 [PlasmaViews][Panel 23][Defaults]
 maxLength=838
 minLength=724
-thickness=50
+thickness=52
 
 [PlasmaViews][Panel 23][Horizontal1920]
 thickness=44
@@ -30,7 +30,7 @@ thickness=44
 [PlasmaViews][Panel 23][Vertical1080]
 maxLength=838
 minLength=724
-thickness=50
+thickness=52
 
 [ScreenConnectors]
 0=LVDS-1
