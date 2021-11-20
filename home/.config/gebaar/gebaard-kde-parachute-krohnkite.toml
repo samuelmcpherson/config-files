@@ -17,7 +17,7 @@ up = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.
 left_down = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Krohnkite: Next Layout'"
 right_down = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Krohnkite: Next Layout'"
 down = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Krohnkite: Move Down/Next'"
-left = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Krohnkite: Move  Left'"
+left = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Krohnkite: Move Left'"
 right = "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut 'Krohnkite: Move Right'"
 
 [pinch.commands]
