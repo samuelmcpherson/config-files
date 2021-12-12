@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=System;
-Exec=caps_remap.sh
-Name=caps_remap
+Exec=~/touchscreenextras-master/release/RunTouchscreenExtras.sh
+Name=gebaard
 StartupNotify=false
 Terminal=false
 Type=Application

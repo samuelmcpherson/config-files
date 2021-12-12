@@ -2,7 +2,7 @@
 Categories=System;Monitor;
 Exec=conky -c ~/.conkyrc2 --daemonize --pause=1
 Icon=conky-logomark-violet
-Name=conky-2
+Name=conky2
 StartupNotify=false
 Terminal=false
 Type=Application

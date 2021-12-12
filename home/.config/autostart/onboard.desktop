@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Utility;Accessibility;
+Comment=Flexible onscreen keyboard
+Exec=onboard
+GenericName=Onboard onscreen keyboard
+Icon=onboard
+Keywords=onscreen;keyboard;accessibility;utility;
+Name=Onboard
+Terminal=false
+Type=Application
+X-Ubuntu-Gettext-Domain=onboard
